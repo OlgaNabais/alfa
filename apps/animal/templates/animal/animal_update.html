@@ -2,7 +2,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h3>Pessoas</h3>
+
+<h3>Animal</h3>
 <hr>
 <div class="content-section">
     <form method="POST">
@@ -10,8 +11,9 @@
 
         {{ form|crispy }}
         <br>
-        <button class="btn btn-outline-primary" type="submit">Criar</button>
-        <a class= "btn btn-outline-danger" href="{% url 'pessoa:lista' %}">Voltar</a>
+        <button class="btn btn-outline-primary" type="submit">Guardar</button>
+        <a class= "btn btn-outline-danger" href="{% url 'animal:lista' %}">Voltar</a>
+
     </form>
 
 </div>

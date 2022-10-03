@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<h3>Pessoas</h3>
+<hr>
 <a class="btn btn-outline-primary" href="{% url 'pessoa:novo' %}"><i class="fa-solid fa-plus"></i></a>
 
 <table class="table">
@@ -11,6 +12,8 @@
         <th>NIF</th>
         <th>E-mail</th>
         <th></th>
+        <th></th>
+        <th></th>
     </tr>
 {% for object in object_list %}
 <tr>
@@ -19,6 +22,8 @@
     <td>{{ object.nif }}</td>
     <td>{{ object.email }}</td>
     <td><a class="btn btn-outline-primary" href="{% url 'pessoa:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
+    <td><a class="btn btn-outline-primary" href="{% url 'pessoa:atualizar' object.id %}"><i class="fa-solid fa-pencil"></i></a></td>
+    <td><a class="btn btn-outline-danger" href="{% url 'pessoa:eliminar' object.id %}"><i class="fa-solid fa-trash-can"></i></a></td>
 
 </tr>
 {% endfor %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Pessoas</h3>
+<hr>
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <p>Tem a certeza que pretende eliminar "{{ object.nome }}"</p>
+        {{ form }}
+        <br>
+        <button class="btn btn-outline-danger" type="submit">Sim</button>
+        <a class= "btn btn-outline-primary" href="{% url 'pessoa:lista' %}">Não</a>
+    </form>
+
+</div>
+{% endblock %}

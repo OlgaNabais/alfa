@@ -3,7 +3,17 @@
 {% block content %}
 
 <div class="content-section">
-    <h3>Animal</h3>
+    <div class="row">
+        <div class="col-1">
+            <h3>Animal</h3>
+        </div>
+        <div class="col-1">
+        <a class= "btn btn-outline-primary" href="{% url 'animal:detalhe-atualizar' object.id %}"><i class="fa-solid fa-pencil"></i></a>
+        </div>
+        <div class="col-1">
+            <a class= "btn btn-outline-danger" href="{% url 'animal:detalhe-eliminar' object.id %}"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
     <hr>
     <div style="padding:15px">
         <p><b>Nome: </b>{{ object.nome }}</p>
