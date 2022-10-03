@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="content-section">
+    <h3>Pessoa</h3>
+    <hr>
+    <div style="padding:15px">
+        <p><b>Nome: </b>{{ object.nome }}</p>
+        <p><b>Idade: </b>{{ object.idade }}</p>
+        <p><b>NIF: </b>{{ object.nif }}</p>
+        <p><b>E-mail: </b>{{ object.email }}</p>
+    </div>
+    <a class= "btn btn-outline-danger" href="{% url 'pessoa:lista' %}">Voltar</a>
+</div>
+
+{% endblock %}

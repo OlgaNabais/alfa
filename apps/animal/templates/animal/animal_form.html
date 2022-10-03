@@ -7,8 +7,10 @@
         {% csrf_token %}
 
         {{ form|crispy }}
+        <br>
+        <button class="btn btn-outline-primary" type="submit">Criar</button>
+        <a class= "btn btn-outline-danger" href="{% url 'animal:lista' %}">Voltar</a>
 
-        <button class="btn btn-primary" type="submit">Criar</button>
     </form>
 
 </div>

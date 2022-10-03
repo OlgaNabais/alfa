@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView, DetailView
 from django.urls import reverse_lazy
 from .models import Pessoa
 
@@ -12,4 +12,10 @@ def contacts(request):
 class PessoaCreateView(CreateView):
     model = Pessoa
     fields = '__all__'
-    success_url = reverse_lazy('animal:home')
+    success_url = reverse_lazy('pessoa:lista')
+
+class PessoaListView(ListView):
+    model = Pessoa
+
+class PessoaDetailView(DetailView):
+    model = Pessoa
